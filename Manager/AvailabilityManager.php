@@ -10,15 +10,15 @@
  * please view the LICENSE file that was distributed with this source code.
  */
 
-namespace WellCommerce\Bundle\AvailabilityBundle\Manager\Admin;
+namespace WellCommerce\Bundle\AvailabilityBundle\Manager;
 
-use WellCommerce\Bundle\CoreBundle\Manager\Admin\AbstractAdminManager;
+use WellCommerce\Bundle\CoreBundle\Manager\AbstractManager;
 
 /**
  * Class AvailabilityManager
  *
  * @author  Adam Piotrowski <adam@wellcommerce.org>
  */
-class AvailabilityManager extends AbstractAdminManager
+class AvailabilityManager extends AbstractManager
 {
 }
