@@ -22,23 +22,16 @@ use WellCommerce\Bundle\CoreBundle\Test\Entity\AbstractEntityTestCase;
  */
 class AvailabilityTest extends AbstractEntityTestCase
 {
-    public function testNewEntityPassesValidation()
+    protected function createEntity()
     {
-        $entity = new Availability();
-        $entity->translate('en')->setName('Test');
-        $entity->mergeNewTranslations();
-
-        $errors = $this->validator->validate($entity);
-        $this->assertEquals(0, count($errors));
+        return new Availability();
     }
-
-    public function testEntityRequiresNonEmptyName()
+    
+    public function providerTestAccessor()
     {
-        $entity = new Availability();
-        $entity->translate('en')->setName('');
-        $entity->mergeNewTranslations();
-
-        $errors = $this->validator->validate($entity);
-        $this->assertEquals(1, count($errors));
+        return [
+            ['createdAt', new \DateTime()],
+            ['updatedAt', new \DateTime()],
+        ];
     }
 }
